@@ -1,4 +1,5 @@
-require("dotenv").config()
+require("dotenv").config();
+
 const knex=require("knex")({
     client:"mysql",
     connection:{
@@ -19,4 +20,5 @@ knex.schema.createTable("user",(table)=>{
 }).catch((err)=>{
     console.log("table already exists");
 })
+
 module.exports=knex
